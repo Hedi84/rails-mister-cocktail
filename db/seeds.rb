@@ -15,7 +15,12 @@ ingredient = JSON.parse(ingredient_serialized)
 
 arrIngredients = ingredient["drinks"].each do |ingredient|
   ingredient["name"] = ingredient["strIngredient1"]
+# ingredient.sort_by{ |key, thing, name| name.to_s }
+
+
   ingredient.delete("strIngredient1")
+
+
 end
 
 Ingredient.create!(arrIngredients)

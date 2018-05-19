@@ -2,32 +2,30 @@
   <div class="banner">
       <div class="banner-content">
         <%#= image_tag 'banner.jpg', class: 'image_style'%>
-        <h1>Cocktails</h1>
+        <h1>Sexy Cocktails</h1>
            <%= link_to "Add your cocktail", new_cocktail_path, type: "button", class: "button" %>
+
 
       </div>
   </div>
 
 
+ <h1>Our Sexy Cocktails</h1>
 
-
-
-
-<div class="container">
-  <h2 class="text-center">Cocktails</h2>
+<div class="cards">
   <div class="row">
     <% @cocktails.each do |cocktail|%>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+      <div class="col-xs-12 col-sm-3">
+        <div class="card">
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
+              <%= link_to 'X', cocktail_path(cocktail[:id]), method: :delete, data: { confirm: 'Are you sure you want to delete this cocktail?' } %>
           </div>
-          <%= link_to 'X', cocktail, method: :delete, data: { confirm: 'Are you sure you want to delete this cocktail?' } %>
         </div>
       </div>
     <% end %>
   </div>
-</div
+</div>
 
 
 
@@ -35,7 +33,8 @@
 
 
 
-<%= link_to 'New Cocktail', new_cocktail_path %>
+
+
 
 
 
