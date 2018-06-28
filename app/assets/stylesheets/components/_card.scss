@@ -8,11 +8,12 @@
 }
 
 .cards {
-  margin-left: 50px;
-  margin-right: 50px;
-  padding-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  // padding-bottom: 50px;
 
 }
+
 
 .row {
 
@@ -28,7 +29,8 @@
   color: white;
   position: relative;
   background-image: asset-url("fire.jpg"), linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
-  padding-bottom: 50px;
+  // padding-bottom: 50px;
+  margin-top: 20px;
 }
 
 

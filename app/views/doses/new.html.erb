@@ -1,3 +1,14 @@
-<h1>Doses#new</h1>
 
-<%= render 'dose_form', cocktail: @cocktail, dose: @dose %>
+<div class="banner3">
+  <div class="align-dose">
+    <div class="header" style="text-align: center">
+      <h1>Add a dose to <%= @cocktail.name %></h1>
+    </div>
+    <div class="flex">
+      <div class="form_dose">
+      <%= render 'dose_form', cocktail: @cocktail, dose: @dose %>
+      </div>
+    </div>
+  </div>
+</div>
+

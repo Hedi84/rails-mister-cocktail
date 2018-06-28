@@ -5,6 +5,7 @@ class IngredientsController < ApplicationController
   def new
     @ingredient = Ingredient.new(ingredient_params)
     @ingredient.save
+    @ingredients = Ingredient.all.order(:name)
   end
 
   def create

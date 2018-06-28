@@ -1,6 +1,8 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
+<div class="text-color">
   <%= f.input :description %>
-  <%= f.association :ingredient %>
+  <%= f.association :ingredient%>
+</div>
   <%= f.button :submit %>
 
  <% end %>

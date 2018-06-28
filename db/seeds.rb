@@ -6,16 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
+puts "destroying ingredients hehe"
 Ingredient.destroy_all
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient_serialized = open(url).read
 ingredient = JSON.parse(ingredient_serialized)
 
+puts "creating ingredients"
 
 arrIngredients = ingredient["drinks"].each do |ingredient|
   ingredient["name"] = ingredient["strIngredient1"]
-# ingredient.sort_by{ |key, thing, name| name.to_s }
+  puts "sorting ingredients"
+ingredient.sort_by{ |thing, name| name.to_s }
 
 
   ingredient.delete("strIngredient1")
@@ -24,3 +27,4 @@ arrIngredients = ingredient["drinks"].each do |ingredient|
 end
 
 Ingredient.create!(arrIngredients)
+puts "done!"

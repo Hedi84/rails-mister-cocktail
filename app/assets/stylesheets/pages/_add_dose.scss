@@ -1,0 +1,31 @@
+.banner3 {
+  height: 100vh;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-image: asset-url("colours.jpg");
+}
+
+
+.align-dose {
+  padding-top: 120px;
+}
+.flex {
+
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.form_dose {
+align-self: center;
+width: 20%;
+text-align: center;
+margin-left: 40px;
+margin-top: 25px;
+
+}
+
+.text-color {
+  color: white;
+}
