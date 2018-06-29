@@ -25,13 +25,11 @@
             <% end %>
             <div class="card-photo" style="background-image: url('<%= photo_url %>');"></div>
              <% end %>
-
                 <h2><%= cocktail.name%></h2>
                   <%= link_to 'X', cocktail_path(cocktail[:id]), method: :delete, data: { confirm: 'Are you sure you want to delete this cocktail?' } %>
               </div>
             </div>
           </div>
-
       <% end %>
     </div>
   </div>
