@@ -30,7 +30,7 @@
   height: 250px;
   width: 400px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
+  // background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
@@ -53,6 +53,10 @@
   left: 10px;
   font-size: 15px;
   text-transform: uppercase;
+  a {
+    color: red !important;
+    font-size: 24px;
+  }
 }
 .card-description {
   position: absolute;
